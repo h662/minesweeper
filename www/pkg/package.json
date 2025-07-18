@@ -1,0 +1,15 @@
+{
+  "name": "minesweeper",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "minesweeper_bg.wasm",
+    "minesweeper.js",
+    "minesweeper.d.ts"
+  ],
+  "main": "minesweeper.js",
+  "types": "minesweeper.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
