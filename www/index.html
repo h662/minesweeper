@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Minesweeper Test</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        #controls {
+            text-align: center;
+            margin: 10px;
+        }
+
+        button {
+            margin: 0 5px;
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+
+        #mode-display {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        canvas {
+            display: block;
+            margin: auto;
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+<div id="controls">
+    <button id="btn-reveal">클릭</button>
+    <button id="btn-flag">지뢰표시</button>
+    <button id="btn-question">물음표</button>
+    현재 모드: <span id="mode-display">클릭</span>
+</div>
+<canvas id="canvas" width="400" height="400"></canvas>
+<div id="gameover-overlay" style="
+      display:none;
+      position:fixed;
+      z-index: 1000;
+      top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.7);
+      align-items:center;
+      justify-content:center;
+    ">
+    <div style="background:white; padding:20px; text-align:center; border-radius:8px;">
+        <h2>💥 Game Over 💥</h2>
+        <button id="btn-restart-popup" style="padding:8px 16px; font-size:16px;">
+            Restart
+        </button>
+    </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
